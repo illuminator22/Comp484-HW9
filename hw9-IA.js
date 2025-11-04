@@ -1,10 +1,5 @@
-// hw9-IA.js
-// COMP 484 JavaScript Coding Exercises — Solutions
-// Run with: node hw9-IA.js
-
-// -------------------------------
-// Set 1: Advanced Syntax, Types, and Quirks
-// -------------------------------
+// COMP 484 Homework 9
+//Ivan Arshakyan
 
 // Exercise 1
 var finalExpressionResult = 3 + 5 * (10 / 2) - (8 - 4);
@@ -13,7 +8,7 @@ console.log("Exercise 1:", finalExpressionResult);
 // Exercise 2
 var projectIdentifier = "COMP484";
 // Attempt with incorrect casing would refer to a different identifier and not reassign `projectIdentifier`.
-// ProjectIdentifier = "JS_Advanced"; // <-- would throw ReferenceError because identifiers are case sensitive.
+// ProjectIdentifier = "JS_Advanced";  would throw ReferenceError because identifiers are case sensitive.
 projectIdentifier = "JS_Advanced";
 console.log("Exercise 2:", projectIdentifier);
 
@@ -34,9 +29,9 @@ console.log("Exercise 5 results:", resultSubtraction, resultMultiplication);
 console.log("Exercise 5 typeof resultSubtraction:", typeof resultSubtraction);
 console.log("Exercise 5 typeof resultMultiplication:", typeof resultMultiplication);
 
-// -------------------------------
-// Set 2: Operators and Type Theory
-// -------------------------------
+
+// Set 2
+
 
 // Exercise 6
 var unassignedVar;
@@ -44,7 +39,7 @@ var explicitNull = null;
 console.log("Exercise 6 typeof unassignedVar:", typeof unassignedVar);
 console.log("Exercise 6 typeof explicitNull:", typeof explicitNull);
 /*
-`typeof null` returns "object" due to a long-standing quirk in JavaScript's original
+typeof null returns object due to a long-standing quirk in JavaScript's original
 implementation, where values were tagged in a way that caused null to be identified
 as an object. This behavior is standardized for backward compatibility.
 */
@@ -56,9 +51,9 @@ isBlocking = "true";
 console.log("Exercise 7 typeof after string assignment:", typeof isBlocking);
 
 // Exercise 8
-// 1) var 2fast = 1; // Invalid: identifiers cannot start with a number.
-// 2) var my var = 2; // Invalid: spaces are not allowed in variable names.
-// 3) var user-name = 3; // Invalid: hyphen is not allowed in identifiers (interpreted as subtraction).
+// 1) var 2fast = 1; Invalid: identifiers cannot start with a number.
+// 2) var my var = 2; Invalid: spaces are not allowed in variable names.
+// 3) var user-name = 3; Invalid: hyphen is not allowed in identifiers.
 
 // Exercise 9
 var counterValue = 50;
@@ -68,17 +63,15 @@ console.log("Exercise 9:", counterValue);
 
 // Exercise 10
 var x = 10;
-var y_post = x++; // Postfix: assign first, then increment.
+var y_post = x++; // Postfix
 console.log("Exercise 10 (postfix) y_post:", y_post, "x:", x);
 x = 10;
-var z_pre = ++x; // Prefix: increment first, then assign.
+var z_pre = ++x; // Prefix
 console.log("Exercise 10 (prefix) z_pre:", z_pre, "x:", x);
 // In postfix (x++), `y_post` gets the old value and x increments afterward.
 // In prefix (++x), x increments first and `z_pre` gets the new value.
 
-// -------------------------------
-// Set 3: Advanced Logic and Comparisons
-// -------------------------------
+// Set 3
 
 // Exercise 11
 var testNumber = 0;
@@ -127,14 +120,12 @@ if (scriptLoadType === "deferred") {
 var loadStatusTernary = (scriptLoadType === "deferred") ? "Non-blocking" : "Potentially Blocking";
 console.log("Exercise 15:", loadStatus, loadStatusTernary);
 
-// -------------------------------
 // Set 4: Integration and Application
-// -------------------------------
 
 // Exercise 16
 /*
 calculateRenderTime is intended to compute the total time required to render a page,
-including parsing HTML and executing JavaScript, returning a duration in milliseconds.
+including parsing HTML and executing JavaScript. It returns a duration in milliseconds.
 */
 function calculateRenderTime() {
   // Implementation would go here.
@@ -159,7 +150,7 @@ console.log("Exercise 18 diffResult:", diffResult);
 /*
 The + operator performs string concatenation when one operand is a string,
 so 20 + "5" becomes the string "205". Other arithmetic operators like -, *, /
-coerce strings to numbers; therefore, 20 - "5" yields the numeric 15.
+coerce strings to numbers. This means that 20 - "5" yields the numeric 15.
 */
 
 // Exercise 19
